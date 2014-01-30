@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KeyRing</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="welcome">Welcome to KeyRing!</string>
+    <string name="masterPassSetup1">Enter MasterPass</string>
+    <string name="masterPassSetup2">Retype MasterPass</string>
+    <string name="ok">OK</string>
+    <string name="passwords_dont_match">Passwords do not match</string>
+    <string name="welcome_description">Please choose a Master Password. From now on, this will be the only password you\'ll have to remember!</string>
+    <string name="retype">Please retype your master password twice, identically.</string>
+    <string name="success">Great, good choice!</string>
+    <string name="success_description">OK, this is the first password I will remember for you. Keep in mind this is the only password you\'ll have to remember in order to gain access to all your secret notes and passwords.</string>
+    <string name="enterpass">Enter master password:</string>
+    <string name="masterpassFail">Wrong password!</string>
+    <string name="masterpassFailMessage">Please enter the correct master password!</string>
+
+</resources>
