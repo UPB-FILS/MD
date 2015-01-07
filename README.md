@@ -1,4 +1,4 @@
 MD
 ==
 
-Mobile Devices Applications Developmet
+Mobile Devices Applications Development
