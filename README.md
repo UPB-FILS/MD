@@ -11,3 +11,10 @@ Homework 1
 * Study (reand and understand) http://cordova.apache.org/ ; https://build.phonegap.com/plans
 * JavaScript frameworks http://webix.com/; http://www.idangero.us/framework7/#.VhvTx_ntmko
 * https://developers.facebook.com/docs/javascript; http://www.couchbase.com/nosql-databases/couchbase-mobile; https://cloudant.com/product/cloudant-features/sync/; http://www.iriscouch.com/; https://www.smileupps.com/; http://pouchdb.com/
+
+
+Bonus
+* https://golang.org/
+* https://xamarin.com/
+* https://github.com/google/j2objc ; http://j2objc.org/
+* http://www.m-gwt.com/
