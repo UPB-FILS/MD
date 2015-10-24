@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My First CouchDB CRUD page</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <script src="/_utils/script/json2.js"></script>
+	    <script src="/_utils/script/sha1.js"></script>
+	    <script src="/_utils/script/couch.js"></script>
+	    <script src="/_utils/script/jquery.js"></script>
+	    <script src="/_utils/script/jquery.couch.js"></script>
+	    <script src="/_utils/script/jquery.dialog.js"></script>
+		<style>
+		header {
+		    background-color:black;
+		    color:white;
+		    text-align:center;
+		    padding:5px; 
+		}
+		aside {
+		    line-height:30px;
+		    background-color:#eeeeee;
+		    width:50%;
+		    float:right;
+		    padding:5px; 
+		}
+		section {
+		    width:40%;
+		    float:left;
+		    padding:10px; 
+		}
+		footer {
+		    background-color:black;
+		    color:white;
+		    clear:both;
+		    text-align:center;
+		    padding:5px; 
+		}
+		</style>
+		<script>
+			function logResponse(message){
+				document.getElementById("log").innerHTML = 
+				"<p>LOG:</p><pre><code>" + JSON.stringify(message, undefined, 2) + "</code></pre>";
+			}
+			
+			function createDB(){
+				$.couch.urlPrefix = CouchDB.protocol + CouchDB.host + "/";
+				var payload = JSON.parse(document.getElementById("payload").value);
+				$.couch.db(payload.database).create({
+				    success: function(data) {
+				        console.log(data);
+						logResponse(data);
+				    },
+				    error: function(status) {
+				        console.log(status);
+						logResponse(status);
+				    }
+				});
+			};
+			
+			function readInfoDB(){
+				$.couch.urlPrefix = CouchDB.protocol + CouchDB.host + "/";
+				var payload = JSON.parse(document.getElementById("payload").value);
+				$.couch.db(payload.database).info({
+				    success: function(data) {
+				        console.log(data);
+						logResponse(data);
+				    }
+				});
+			};
+			
+			function deleteDB(){
+				$.couch.urlPrefix = CouchDB.protocol + CouchDB.host + "/";
+				var payload = JSON.parse(document.getElementById("payload").value);
+				$.couch.db(payload.database).drop({
+				    success: function(data) {
+				        console.log(data);
+						logResponse(data);
+				    },
+				    error: function(status) {
+				        console.log(status);
+						logResponse(status);
+				    }
+				});
+			};
+			
+			function createDoc(){
+				$.couch.urlPrefix = CouchDB.protocol + CouchDB.host + "/";
+				var payload = JSON.parse(document.getElementById("payload").value);
+				$.couch.db(payload.database).saveDoc(payload.document, {
+				    success: function(data) {
+				        console.log(data);
+						logResponse(data);
+				    },
+				    error: function(status) {
+				        console.log(status);
+						logResponse(status);
+				    }
+				});
+			};
+			
+			function readDoc(){
+				$.couch.urlPrefix = CouchDB.protocol + CouchDB.host + "/";
+				var payload = JSON.parse(document.getElementById("payload").value);
+				$.couch.db(payload.database).openDoc(payload.document._id, {
+				    success: function(data) {
+				        console.log(data);
+						logResponse(data);
+				    },
+				    error: function(status) {
+				        console.log(status);
+						logResponse(status);
+				    }
+				});
+			};
+			
+			function updateDoc(){
+				//doc._id and doc._rev must be provided
+				$.couch.urlPrefix = CouchDB.protocol + CouchDB.host + "/";
+				var payload = JSON.parse(document.getElementById("payload").value);
+				$.couch.db(payload.database).saveDoc(payload.document, {
+				    success: function(data) {
+				        console.log(data);
+						logResponse(data);
+				    },
+				    error: function(status) {
+				        console.log(status);
+						logResponse(status);
+				    }
+				});
+			};
+			
+			function deleteDoc(){
+				//doc._id and doc._rev must be provided
+				$.couch.urlPrefix = CouchDB.protocol + CouchDB.host + "/";
+				var payload = JSON.parse(document.getElementById("payload").value);
+				$.couch.db(payload.database).removeDoc(payload.document, {
+				     success: function(data) {
+				         console.log(data);
+						 logResponse(data);
+				    },
+				    error: function(status) {
+				        console.log(status);
+						logResponse(status);
+				    }
+				});
+			};
+		</script>
+	</head>	
+	
+	<body>
+		<header>
+		<h1>Basic CRUD with CouchDB</h1>
+		</header>
+
+		<section>
+		<button type="button" onclick="createDB()">Create Database</button> | 
+		<button type="button" onclick="readInfoDB()">Read Database Info</button> | 
+		<button type="button" onclick="deleteDB()">Delete Database</button><br/>
+		<button type="button" onclick="createDoc()">Create Document</button> |
+		<button type="button" onclick="readDoc()">Read Document</button> | 
+		<button type="button" onclick="updateDoc()">Update Document</button> |
+		<button type="button" onclick="deleteDoc()">Delete Document</button>
+		<p>Payload:</p>
+		<textarea id="payload" rows="10" cols="100">
+		Type in attributes or JSON payload
+		</textarea>
+		</section>
+		<aside id="log">
+			<p>LOG:</p>
+		</aside>
+		<footer>
+		StackBricks.com - 2015
+		</footer>
+	</body>
+</html>
