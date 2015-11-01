@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>ToDo List</title>
+		<link rel="icon" type="image/png" href="assets/R2D2_16.png"/>
+		<link rel="stylesheet" href="webix/codebase/webix.css" type="text/css" media="screen" charset="utf-8">
+		<!-- CouchDB JavaScript libraries -->
+	    <script src="/_utils/script/json2.js"></script>
+	    <script src="/_utils/script/sha1.js"></script>
+	    <script src="/_utils/script/couch.js"></script>
+	    <script src="/_utils/script/jquery.js"></script>
+	    <script src="/_utils/script/jquery.couch.js"></script>
+	    <script src="/_utils/script/jquery.dialog.js"></script>
+		<!-- Webix framework -->
+		<script src="webix/codebase/webix.js" type="text/javascript" charset="utf-8"></script>    
+		<!-- ToDo Application -->
+		<script src="./app.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	<script type="text/javascript">
+		/*
+		 This is a Single Page Application
+		 it is designed for Desktop browsers
+		*/	
+		webix.ready(function(){
+			webix.ui(app.ui);
+		});	
+	</script>
+	</body>
+</html>
