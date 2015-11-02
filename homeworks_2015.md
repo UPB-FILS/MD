@@ -17,7 +17,7 @@ Barbu Bianca
 Merdescu Razvan
 Ionita Vlad
 
-Link to repository: https://github.com/AndreeaDragu/SmartNote
+Link to repository: https://github.com/mrazvanalex/SmartNoteFils
 
 Team : 1232 B
 
