@@ -10,3 +10,21 @@ Homerowks:
 
 Link to repository: 
 
+Team : 1232 A
+
+Dragu Andreea 
+Barbu Bianca
+Merdescu Razvan
+Ionita Vlad
+
+Link to repository: https://github.com/AndreeaDragu/SmartNote
+
+Team : 1232 B
+
+Mihai Alexandru
+Ganaside Alexandru
+Ionita Cristian
+
+Link to repository: https://github.com/cristianionita0/QuickFood
+
+
