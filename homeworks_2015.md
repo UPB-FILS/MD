@@ -9,6 +9,7 @@ Homerowks:
 * Mehmetcan Avdan
 
 Link to repository: 
+https://github.com/ArdaOzkardesler/Xchange-Presentation
 
 Team : 1232 A
 
@@ -26,5 +27,3 @@ Ganaside Alexandru
 Ionita Cristian
 
 Link to repository: https://github.com/cristianionita0/QuickFood
-
-
