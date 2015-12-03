@@ -28,22 +28,33 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+	        <!-- Enable all requests, inline styles, and eval() -->
+			<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+	<!--		
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+		-->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+		
+		<meta charset="UTF-8">	
+		<!-- Webix styles -->
+		<link rel="stylesheet" href="js/webix/codebase/skins/touch.css" type="text/css" media="screen" charset="utf-8">
+		
+		<!-- Webix framework -->
+		<script src="js/webix/codebase/webix.js" type="text/javascript" charset="utf-8"></script>    
+		<!-- Webix framework -->
+		<script src="js/pouchdb-5.1.0.min.js" type="text/javascript" charset="utf-8"></script>    
+		<!-- ToDo Application -->
+		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <title>ToDo Application</title>
+    </head>
+    <body>
+        <script type="text/javascript" charset="utf-8">
+			app.initialize();
+		</script>
+        
     </body>
 </html>

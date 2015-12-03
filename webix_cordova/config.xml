@@ -1,15 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+<widget id="com.github.fils" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>ToDO</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A sample Apache Cordova application with Webix and PouchDB that communicates with CouchDB.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="dragos_constantin_stoica@yahoo.com" href="https://github.com/UPB-FILS/MD">
+        FILS - Mobile Devices LAB
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" version="1" />
-    <access origin="*" />
+    
+    <allow-navigation href="*" />
+    
+    <allow-intent href="*" />
+	<access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -23,4 +27,11 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+	<preference name="iosExtraFilesystems" value="library,library-nosync,documents,documents-nosync,cache,bundle,root" />
+    <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="stay-in-webview"            value="true" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+    <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
+	
+	
 </widget>
