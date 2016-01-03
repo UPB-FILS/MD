@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>ToDO</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="f7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="f7/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="app/my-app.css">
+      <!-- Path to libraries -->
+      <script type="text/javascript" src="lib/pouchdb-5.1.0.min.js"></script>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+                <div class="left">
+                  <!-- Left link contains only icon - additional "icon-only" class-->
+                    <a href="#editForm" class="link">
+                        <i class="icon icon-plus">+</i>
+                    </a>
+                </div>
+                <div class="center sliding">ToDO</div>
+                <div class="right">
+                    <!-- Right link contains filter buttons -->
+                    <a href="#" class="link">DONE</a>
+                </div>
+            </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+                <!-- Virtual List -->
+                <div class="list-block virtual-list media-list">
+                  <!-- keep it empty -->
+                </div>    
+            </div>
+          </div>
+        <!-- End index page -->
+            
+             <!-- editForm page -->
+          <div class="page cached" data-page="editForm">
+            <div class="page-content">
+              <div class="content-block-title">New To Do:</div>
+                <form id="newItem" class="list-block">
+                  <ul>
+                    <li>
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-input">
+                            <input type="text" name="title" placeholder="ToDO">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
+                 <div class="row">
+                  <div class="col-50">
+                    <a href="#index" class="button button-big button-red">Cancel</a>
+                  </div>
+                  <div class="col-50">
+                    <a href="#" class="button button-big button-green createToDO">Save</a>
+                  </div>
+                </div>  
+            </div>
+          </div>
+            <!-- End editForm page -->
+            
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="f7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="app/my-app.js"></script>
+  </body>
+</html>
